@@ -1,0 +1,19 @@
+@startuml xxシステム
+participant ユーザ as U
+participant xxアプリ as AP 
+participant xxシステム as SYS
+participant xxシステム管理者 as SYSM
+
+== 通常 ==
+U -> AP: xxシス転送設定を行い連絡
+AP -> AP: 連絡情報更新
+AP -> SYS: 連絡転送
+
+== 異常検知 ==
+AP -> SYS: 連絡転送
+SYS -> SYS: 異常検知
+note right
+下層でエラーがエラーが発生した場合
+end note
+SYSM -> U: 運用フローのお知らせ
+@enduml
