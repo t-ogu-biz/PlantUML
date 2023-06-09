@@ -5,7 +5,7 @@
 [Visual Studio Code で UML を描こう！](https://qiita.com/couzie/items/9dedb834c5aff09ea7b2)
 
 ## サンプルコード
-![PlantUML](./images/PlantUML.png)
+![PlantUML](./images/PlantUML.png) 
 ```
 @startuml PlantUMLサンプル
 participant ユーザ as U
