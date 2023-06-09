@@ -7,25 +7,26 @@
 ## サンプルコード
 ![PlantUML](./images/PlantUML.png) 
 ```
-@startuml PlantUMLサンプル
+@startuml xxシステム
 participant ユーザ as U
-participant xxアプリ as AP 
-participant xxシステム as SIS 
-participant xxシステム管理者 as SISM
+participant xxシステム as AP 
+participant xxシステム as SYS
+participant xxシステム管理者 as SYSM
 
 == 通常 ==
-U -> AP: xxシス転送設定を行い連絡
-AP -> AP: 連絡情報更新
-AP -> SIS: 連絡転送
+U -> AP: xxシス転送設定を行い報告
+AP -> AP: 報告更新
+AP -> SYS: 報告転送
 
 == 異常検知 ==
-AP -> SIS: 連絡転送
-SIS -> SIS: 異常検知
+AP -> SYS: 報告転送
+SYS -> SYS: 異常検知
 note right
 下層でエラーがエラーが発生した場合
 end note
-SISM -> U: 運用フローのお知らせ
+SYSM -> U: 運用フローのお知らせ
 @enduml
+
 ```
 
 ## 参照
